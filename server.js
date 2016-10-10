@@ -16,5 +16,5 @@ const server = http.createServer((req, res) => {
     });
 });
 
-const port = Number(argv.port) || 3000;
+const port = Number(argv.port) || 9200;
 server.listen(port);
