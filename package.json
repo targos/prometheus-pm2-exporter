@@ -1,0 +1,32 @@
+{
+  "name": "prometheus-pm2-exporter",
+  "version": "0.0.0",
+  "description": "Prometheus exporter for PM2 metrics",
+  "main": "index.js",
+  "bin": {
+    "prometheus-pm2-exporter": "server.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targos/prometheus-pm2-exporter.git"
+  },
+  "keywords": [
+    "prometheus",
+    "exporter",
+    "pm2"
+  ],
+  "author": "Michaël Zasso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/targos/prometheus-pm2-exporter/issues"
+  },
+  "homepage": "https://github.com/targos/prometheus-pm2-exporter#readme",
+  "dependencies": {
+    "pm2": "^2.0.18",
+    "prom-client": "^6.0.0",
+    "yargs": "^6.0.0"
+  }
+}
