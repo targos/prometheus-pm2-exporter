@@ -8,24 +8,13 @@ client.register.clear();
 
 const labels = ['name', 'instance'];
 
-let connectProm;
-function connect() {
-    if (connectProm) return connectProm;
-    return new Promise((resolve, reject) => {
-        pm2.connect(function (err) {
-            if (err) return reject(err);
-            resolve();
-        });
-    });
-}
-
 function getList() {
-    return connect().then(() => new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         pm2.list((err, list) => {
             if (err) return reject(err);
             resolve(list);
         });
-    }));
+    });
 }
 
 exports.getMetrics = function () {
