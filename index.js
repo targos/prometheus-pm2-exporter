@@ -35,7 +35,7 @@ exports.getMetrics = function () {
             const up = proc.pm2_env.status === 'online' ? 1 : 0;
             pm2Up.set(app, up);
             pm2Uptime.set(app, Math.round((currentTime - proc.pm2_env.pm_uptime) / 1000));
-            pm2Instances.set(app, proc.pm2_env.instances);
+            pm2Instances.set(app, proc.pm2_env.instances || 1);
             pm2Restarts.set(app, proc.pm2_env.unstable_restarts);
             pm2Cpu.set(app, proc.monit.cpu);
             pm2Memory.set(app, proc.monit.memory);
